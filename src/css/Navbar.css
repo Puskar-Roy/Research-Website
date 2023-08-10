@@ -1,0 +1,107 @@
+header {
+  width: 100%;
+  height: 10vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  background-color: #59e4a8;
+  z-index: 1000000000;
+}
+.brand{
+    font-size: 25px;
+    font-weight: 700;
+letter-spacing: 2px;
+font-family: 'Anton', sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  color: #284b45;
+  font-weight: 600;
+}
+.navList {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  align-items: center;
+}
+
+.menuItem {
+  display: none;
+}
+
+
+
+nav ul li{
+  transition: 0.3s all;
+  cursor: pointer;
+}
+nav ul li:hover{
+  color: white;
+  transition: 0.3s all;
+}
+
+@media (max-width: 762px) {
+  .navList {
+    display: none;
+  }
+  .navListActive {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+    z-index: 1;
+  /* background-color: #2e2f45; */
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+
+  background: linear-gradient(31deg,#4b400f,#a869fd,#36e4a5,#4197e7,#2d45bc);
+  background-size: 300% 300%;
+  animation: gradient-animation 40s ease infinite;
+
+
+  }
+  .menuItem {
+    display: block;
+  }
+  .close,
+  .open {
+    position: absolute;
+    top: 30px;
+    right: 1.87rem;
+    font-size: 25px;
+    z-index: 1;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
